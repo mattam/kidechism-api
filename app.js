@@ -83,6 +83,7 @@ app.get("/stickerImage/:prompt", async function (req, res) {
 
 /*-----------*/
 // The actual API endpoint to return the sticker
+// Preview here: https://kidechism-api2.onrender.com/short/bird
 
 app.get("/short/:prompt", async function (req, res) {
   var prompt = {
@@ -108,7 +109,7 @@ app.get("/short/:prompt", async function (req, res) {
     .removeBackgroundFromImageBase64({
       base64img,
       apiKey: `${process.env.REMOVEBG_API_KEY}`,
-      size: "regular",
+      size: "preview",
       type: "product",
     })
     .then((result) => {

@@ -1,12 +1,16 @@
 # README
 
-This is the [Express](https://expressjs.com) [Hello world](https://expressjs.com/en/starter/hello-world.html) example on [Render](https://render.com).
-
-The app in this repo is deployed at [https://express.onrender.com](https://express.onrender.com).
+This is the API server for generating stickers for the Kidechism app
 
 ## Deployment
 
-See https://render.com/docs/deploy-node-express-app or follow the steps below:
+This app usees a private `.env` file with the API keys for HuggingFace and RemoveBG APIs, so it will build, but it won't work without the keys, let me know if you need them.
+
+But you can try out the API builds on the server live here:
+* Home: https://kidechism-api2.onrender.com/ 
+* Generate any animal (change 'bird') sticker: https://kidechism-api2.onrender.com/stickerImage/bird
+* Generate the same sticker, but return it in base64 https://kidechism-api2.onrender.com/short/bird
+
 
 Create a new web service with the following values:
   * Build Command: `yarn`

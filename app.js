@@ -87,7 +87,7 @@ app.get("/stickerImage/:prompt", async function (req, res) {
 
 app.get("/short/:prompt", async function (req, res) {
   var prompt = {
-    inputs: `sticker, stickers, ${req.params.prompt}`,
+    inputs: `Stickers, sticker ${req.params.prompt}`,
     parameters: {
       negative_prompt: "blurry",
     },
